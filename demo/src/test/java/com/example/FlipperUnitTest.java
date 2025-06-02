@@ -5,7 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class FlipperTest {
+public class FlipperUnitTest {
     private IFlipper flipper;
 
     @BeforeEach
@@ -19,4 +19,11 @@ public class FlipperTest {
         assertEquals(7, flipper.flip(-7));
         assertEquals(0, flipper.flip(0));
     }
+
+    @Test
+    public void edgeFlipTest() {
+        assertEquals(Integer.MIN_VALUE + 1, flipper.flip(Integer.MAX_VALUE));
+        assertEquals(Integer.MAX_VALUE, flipper.flip(Integer.MIN_VALUE + 1));
+    }
+
 }

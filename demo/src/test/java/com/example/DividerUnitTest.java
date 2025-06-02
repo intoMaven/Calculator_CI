@@ -5,7 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class DividerTest {
+public class DividerUnitTest {
     private IDivider divider;
 
     @BeforeEach
@@ -23,4 +23,12 @@ public class DividerTest {
     public void divideByZeroShouldThrowException() {
         assertThrows(ArithmeticException.class, () -> divider.divide(10, 0));
     }
+
+    @Test
+    public void negativeDivisionTest() {
+        assertEquals(-2, divider.divide(-10, 5));
+        assertEquals(-2, divider.divide(10, -5));
+        assertEquals(2, divider.divide(-10, -5));
+    }
+
 }

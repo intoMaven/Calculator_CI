@@ -30,6 +30,25 @@ jobs:
     - name: Build with Maven
       working-directory: demo
       run: mvn -B package
+    
+    - name: Run Tests
+      working-directory: demo
+      run: mvn test
+
+    - name: Generate coverage report
+      working-directory: demo
+      run: mvn jacoco:report
+
+    - name: Upload coverage report
+      uses: actions/upload-artifact@v4
+      with:
+        name: jacoco-report
+        path: demo/target/site/jacoco/index.html
+
+    - name: Enforce coverage check (optional)
+      working-directory: demo
+      run: mvn jacoco:check
+
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Update dependency graph

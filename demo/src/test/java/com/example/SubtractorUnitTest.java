@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class SubtractorTest {
+public class SubtractorUnitTest {
     private ISubtractor subtractor;
 
     @BeforeEach
@@ -25,4 +25,11 @@ public class SubtractorTest {
     public void subtractorTest() {
         assertEquals(-2, subtractor.subtract(3, 5));
     }
+
+    @Test
+    public void subtractWithNegativeNumbers() {
+        assertEquals(-8, subtractor.subtract(-3, 5)); // -3 - 5 = -8
+        assertEquals(2, subtractor.subtract(5, 3));
+    }
+
 }

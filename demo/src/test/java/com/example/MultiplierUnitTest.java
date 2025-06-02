@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class MultiplierTest {
+public class MultiplierUnitTest {
     private IMultiplier multiplier;
 
     @BeforeEach
@@ -33,6 +33,13 @@ public class MultiplierTest {
     @Test
     public void multiplierTest2() {
         assertEquals(-6, multiplier.multiply(3, -2));
+    }
+
+    @Test
+    public void zeroAndNegativeCases() {
+        assertEquals(0, multiplier.multiply(0, 10));
+        assertEquals(0, multiplier.multiply(10, 0));
+        assertEquals(0, multiplier.multiply(0, 0));
     }
 
 }

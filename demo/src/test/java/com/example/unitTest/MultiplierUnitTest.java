@@ -1,5 +1,6 @@
-package com.example;
+package com.example.unitTest;
 
+import com.example.Multiplier;
 import com.example.interfaces.IAdder;
 import com.example.interfaces.IFlipper;
 import com.example.interfaces.IMultiplier;

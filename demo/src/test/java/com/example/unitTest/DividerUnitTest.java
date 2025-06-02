@@ -1,5 +1,6 @@
-package com.example;
+package com.example.unitTest;
 
+import com.example.Divider;
 import com.example.interfaces.IDivider;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

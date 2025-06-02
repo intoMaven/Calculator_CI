@@ -1,5 +1,6 @@
-package com.example;
+package com.example.unitTest;
 
+import com.example.Adder;
 import com.example.interfaces.IAdder;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

@@ -1,5 +1,6 @@
-package com.example;
+package com.example.unitTest;
 
+import com.example.Flipper;
 import com.example.interfaces.IFlipper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

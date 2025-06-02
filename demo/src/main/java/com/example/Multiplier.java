@@ -14,14 +14,26 @@ public class Multiplier implements IMultiplier {
     }
 
     public int multiply(int a, int b) {
-        if (b < 0) {
-            a = flipper.flip(a);
-            b = flipper.flip(b);
-        }
-        int result = 0;
+        boolean negativeResult = false;
 
+        // 음수 부호 처리
+        if (a < 0) {
+            a = flipper.flip(a); // 음수 -> 양수로 변환
+            negativeResult = !negativeResult;
+        }
+        if (b < 0) {
+            b = flipper.flip(b); // 음수 -> 양수로 변환
+            negativeResult = !negativeResult;
+        }
+
+        int result = 0;
         for (int i = 0; i < b; i++) {
             result = adder.add(result, a);
+        }
+
+        // 결과 부호 처리
+        if (negativeResult) {
+            result = flipper.flip(result);
         }
         return result;
     }

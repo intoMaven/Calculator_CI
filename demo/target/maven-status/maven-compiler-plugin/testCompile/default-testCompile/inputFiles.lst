@@ -1,5 +1,6 @@
-C:\vscode\Java\Calculator\demo\src\test\java\com\example\MultiplierUnitTest.java
-C:\vscode\Java\Calculator\demo\src\test\java\com\example\FlipperUnitTest.java
-C:\vscode\Java\Calculator\demo\src\test\java\com\example\DividerUnitTest.java
-C:\vscode\Java\Calculator\demo\src\test\java\com\example\SubtractorUnitTest.java
-C:\vscode\Java\Calculator\demo\src\test\java\com\example\AdderUnitTest.java
+c:\vscode\Java\Calculator\demo\src\test\java\com\example\unitTest\DividerUnitTest.java
+c:\vscode\Java\Calculator\demo\src\test\java\com\example\integrationTest\CalculatorIntegrationTest.java
+c:\vscode\Java\Calculator\demo\src\test\java\com\example\unitTest\MultiplierUnitTest.java
+c:\vscode\Java\Calculator\demo\src\test\java\com\example\unitTest\FlipperUnitTest.java
+c:\vscode\Java\Calculator\demo\src\test\java\com\example\unitTest\SubtractorUnitTest.java
+c:\vscode\Java\Calculator\demo\src\test\java\com\example\unitTest\AdderUnitTest.java

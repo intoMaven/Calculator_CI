@@ -1,6 +1,5 @@
 package com.example.integrationTest;
 
-import com.example.Subtractor;
 import com.example.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -20,7 +19,7 @@ public class CalculatorIntegrationTest {
         flipper = new Flipper();
         subtractor = new Subtractor(adder, flipper);
         multiplier = new Multiplier(adder, flipper);
-        divider = new Divider(); // 단순 구현이면 mock 없이도 테스트 가능
+        divider = new Divider(subtractor, multiplier); // 단순 구현이면 mock 없이도 테스트 가능
     }
 
     @Test

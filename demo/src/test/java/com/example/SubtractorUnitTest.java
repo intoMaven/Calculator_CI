@@ -17,7 +17,12 @@ public class SubtractorUnitTest {
         IFlipper flipper = Mockito.mock(IFlipper.class);
 
         Mockito.when(flipper.flip(5)).thenReturn(-5);
+        Mockito.when(flipper.flip(3)).thenReturn(-3);
+
         Mockito.when(adder.add(3, -5)).thenReturn(-2);
+        Mockito.when(adder.add(-3, -5)).thenReturn(-8);
+        Mockito.when(adder.add(5, -3)).thenReturn(2);
+
         subtractor = new Subtractor(adder, flipper);
     }
 

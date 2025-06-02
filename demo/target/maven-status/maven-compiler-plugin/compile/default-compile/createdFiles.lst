@@ -1,0 +1,10 @@
+com\example\interfaces\IDivider.class
+com\example\interfaces\ISubtractor.class
+com\example\interfaces\IFlipper.class
+com\example\interfaces\IAdder.class
+com\example\Adder.class
+com\example\interfaces\IMultiplier.class
+com\example\Multiplier.class
+com\example\Subtractor.class
+com\example\Divider.class
+com\example\Flipper.class

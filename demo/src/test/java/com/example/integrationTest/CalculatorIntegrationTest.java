@@ -2,6 +2,7 @@ package com.example.integrationTest;
 
 import com.example.*;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -23,6 +24,24 @@ public class CalculatorIntegrationTest {
     }
 
     @Test
+    @DisplayName("음수 연산 조합 테스트: 부호 반전 포함")
+    public void testNegativeOperations() {
+        assertEquals(-2, subtractor.subtract(3, 5));
+        assertEquals(-6, multiplier.multiply(-2, 3));
+        assertEquals(2, divider.divide(-6, -3));
+    }
+
+    @Test
+    @DisplayName("경계값 테스트: 0과 1에 대한 연산")
+    public void testZeroAndOne() {
+        assertEquals(0, multiplier.multiply(0, 100));
+        assertEquals(100, multiplier.multiply(1, 100));
+        assertEquals(0, subtractor.subtract(0, 0));
+        assertEquals(1, divider.divide(100, 100));
+    }
+
+    @Test
+    @DisplayName("add → multiply, subtract → divide 통합 시나리오")
     public void testFullOperation() {
         // 1. add + multiply
         int result = adder.add(2, 3); // 5
@@ -35,6 +54,7 @@ public class CalculatorIntegrationTest {
     }
 
     @Test
+    @DisplayName("복합 연산 흐름 테스트: ((3 + 5) - 2) * 2 = 12")
     public void testChainedOperations() {
         // ((3 + 5) - 2) * 2 = 12
         int sum = adder.add(3, 5);

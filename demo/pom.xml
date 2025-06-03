@@ -57,6 +57,11 @@
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
           <version>2.22.1</version>
+          <configuration>
+            <includes>
+              <include>**/unitTest/*Test.java</include>
+            </includes>
+          </configuration>
         </plugin>
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
@@ -119,6 +124,27 @@
                   </rules>
                 </configuration>
               </execution>
+          </executions>
+        </plugin>
+
+        
+         <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-failsafe-plugin</artifactId>
+          <version>3.0.0</version>
+          <executions>
+            <execution>
+              <id>integration-test</id>
+              <goals>
+                <goal>integration-test</goal>
+                <goal>verify</goal>
+              </goals>
+              <configuration>
+                <includes>
+                  <include>**/integrationTest/*Test.java</include>
+                </includes>
+              </configuration>
+            </execution>
           </executions>
         </plugin>
       </plugins>

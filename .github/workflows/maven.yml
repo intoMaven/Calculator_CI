@@ -30,9 +30,14 @@ jobs:
       working-directory: demo
       run: mvn -B package
     
-    - name: Run Tests
+    - name: Run Unit Tests
       working-directory: demo
       run: mvn test
+
+    - name: Run Integration Tests
+      working-directory: demo
+      if: success()
+      run: mvn failsafe:integration-test failsafe:verify
 
     - name: Generate coverage report
       working-directory: demo
